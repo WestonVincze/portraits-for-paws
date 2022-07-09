@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import Header from '../components/Header/Header'
+import Button from '../components/Button'
+import Container from '../components/Container'
 
 export default function Home() {
   return (
-    <div className="container">
+    <Container>
       hello world
-    </div>
+      <Button path="/about">test</Button>
+    </Container>
   )
 }
