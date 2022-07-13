@@ -7,7 +7,7 @@ function Button({ path, variant, children }) {
 
   return(
     <Link href={path}>
-      <a class={`${styles.button} ${buttonStyle}`}>
+      <a className={`${styles.button} ${buttonStyle}`}>
         {children}
       </a>
     </Link>
