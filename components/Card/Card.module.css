@@ -1,4 +1,31 @@
 .card {
   border-radius: 5px;
   border: 2px solid var(--accent);
+  padding: var(--spacing-2);
+}
+
+.cardHeader h2 {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+/* variants */
+.offsetBorder {
+  border-radius: 0;
+  border: none;
+  background-color: var(--accent);
+  box-shadow: 6px 6px 0px 0px var(--accent-dark-alpha);
+}
+
+.offsetBorder.clickable {
+  transition: all 0.3s;
+}
+.offsetBorder.clickable:hover {
+  cursor: pointer;
+  background-color: var(--accent-hover);
+  transition: all 0.3s;
+}
+
+.offsetBorder.active {
+  background-color: var(--accent-hover);
 }

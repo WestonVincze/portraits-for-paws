@@ -1,0 +1,8 @@
+.icon {
+
+}
+
+.largeIcon i {
+  color: var(--accent-dark-2);
+  font-size: 32px;
+}

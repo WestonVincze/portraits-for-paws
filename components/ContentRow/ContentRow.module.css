@@ -1,7 +1,17 @@
 .row {
   display: flex;
+  column-gap: var(--spacing-2);
 }
 
 .col {
+  flex: 1 33%;
+}
 
+.col-2 .col {
+  max-width: 50%;
+
+}
+
+.col-3 .col {
+  max-width: 33%;
 }

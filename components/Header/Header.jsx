@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Button from "../Button";
+import Icon from "../Icon";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -29,10 +30,14 @@ function Header() {
           </Link>
         </div>
         <div className={styles.headerRight}>
+          <Button path="/pricing" variant="navButton">Pricing</Button>
+          <Button path="/gallery" variant="navButton">Gallery</Button>
           <Button path="/rescues" variant="navButton">Rescues</Button>
-          <Button path="/plans" variant="navButton">Plans</Button>
           <Button path="https://www.instagram.com/portraitsforpaws/" variant="navIcon">
-            <i className="bi bi-instagram" />
+            <Icon type="instagram" />
+          </Button>
+          <Button path="mailto:jyothsna.v@hotmail.com" variant="navIcon">
+            <Icon type="envelope" />
           </Button>
         </div>
       </div>
