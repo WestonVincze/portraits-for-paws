@@ -1,7 +1,7 @@
 import styles from "./Carousel.module.css";
 import { useState, useEffect } from "react";
 
-export default function ImageCarousel({ images, variant, title, }) {
+export default function Carousel({ images, variant, title, }) {
   const [currentImagePosition, setCurrentImagePosition] = useState(0);
 
   useEffect(() => {

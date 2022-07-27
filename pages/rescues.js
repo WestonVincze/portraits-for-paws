@@ -1,10 +1,5 @@
-import Container from "../components/Container";
+import RescuesScene from "../scenes/RescuesScene/RescuesScene";
 
 export default function Rescues() {
-  return(
-  <>
-    <Container>
-      <h1>Rescues</h1>
-    </Container>
-  </>)
+  return(<RescuesScene />);
 }

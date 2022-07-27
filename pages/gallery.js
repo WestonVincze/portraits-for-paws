@@ -1,5 +1,5 @@
-import React from "react";
+import GalleryScene from "../scenes/Gallery/GalleryScene";
 
 export default function Gallery() {
-  return(<></>);
+  return(<GalleryScene />);
 }
