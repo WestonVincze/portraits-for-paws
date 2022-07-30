@@ -1,28 +1,38 @@
 import styles from "./Carousel.module.css";
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-export default function Carousel({ images, variant, title, }) {
-  const [currentImagePosition, setCurrentImagePosition] = useState(0);
+function Carousel({ variant, time = 5000, title, children }) {
+  const [currentSlidePosition, setCurrentSlidePosition] = useState(0);
+  const slides = children;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (currentImagePosition === images.length - 1) {
-        setCurrentImagePosition(0);
+      if (slides.length && slides.length - 1 === currentSlidePosition) {
+        setCurrentSlidePosition(0);
       } else {
-        setCurrentImagePosition((prevCurrentImagePosition) => prevCurrentImagePosition + 1);
+        setCurrentSlidePosition((prevCurrentSlidePosition) => prevCurrentSlidePosition + 1);
       }
-    }, 1000);
+    }, time);
 
     return () => clearInterval(interval);
-  }, [currentImagePosition]);
+  }, [currentSlidePosition]);
 
   // cycle through array of images on a timer 
   // add chevron images to cycle images manually
 
   return(
     <div className={styles.carousel}>
-      {title}
-      {currentImagePosition}
+      {title && title}
+      {slides[currentSlidePosition]}
     </div>
   );
 }
+
+/* 
+Carousel.propTypes = {
+  slides: PropTypes.arrayof(PropTypes.any).isRequired,
+}
+*/
+
+export default Carousel;

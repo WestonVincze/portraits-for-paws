@@ -2,11 +2,14 @@ import Container from "/components/Container";
 import Card from "/components/Card";
 import ContentRow from "/components/ContentRow";
 import Carousel from "/components/Carousel/Carousel";
+import Image from "next/image";
 import { useState } from "react";
 import { pricingOptions, galleries } from "./data";
 
 export default function PricingScene() {
   const [selectedDemo, setSelectedDemo] = useState(null);
+
+  const slides = galleries;
   // store current example
   // populate cols in contentRow with images based on selectedExample
   return (
@@ -35,16 +38,23 @@ export default function PricingScene() {
         <Container>
           <h1>Viewing {galleries[selectedDemo].title || "No example"}</h1>
 
-          <ContentRow 
-            cols={[
-              // TODO: make an image gallery component that accepts an array of images
-              galleries[selectedDemo].before,
-              galleries[selectedDemo].after,
-            ]}
-          />
           <Container>
-            <Carousel
-              images={[0,1,2]} />
+            <p>Before</p>
+            <Carousel>
+              {
+                galleries[selectedDemo].before.map((image) => (
+                  <Image src={image.url} width="300" height="300" key={image.id} />
+                ))
+              }
+            </Carousel>
+            <p>After</p>
+            <Carousel>
+              {
+                galleries[selectedDemo].after.map((image) => (
+                  <Image src={image.url} width="300" height="300" key={image.key} />
+                ))
+              }
+            </Carousel>
           </Container>
         </Container>
       }

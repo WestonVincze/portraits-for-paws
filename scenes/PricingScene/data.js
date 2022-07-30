@@ -22,34 +22,56 @@ export const pricingOptions = [
   }
 ];
 
-// TODO: before/after should actually contian an array of images
 export const galleries= {
   pet_portrait: {
+    id: "1",
     title: "Pet Portrait",
     price: "$30",
     body: "Portrait of one pet.",
-    before: <>pet portrait before</>,
-    after: <>pet portrait after</>
+    before:
+      [
+        {
+          id: "1",
+          url: "/images/portfolio/1.png",
+        },
+        {
+          id: "2",
+          url: "/images/portfolio/2.png",
+        }
+      ],
+    after: [
+      {
+        id: "1",
+        url: "/images/portfolio/4.png",
+      },
+      {
+        id: "1",
+        url:"/images/portfolio/5.png",
+      }
+    ]
   },
   faceless_portrait: {
+    id: "2",
     title: "Faceless Portrait",
     price: "$30",
     body: "Faceless Portrait.",
-    before: <>faceless portrait before</>,
-    after: <>faceless portrait after</>,
+    before: "/images/portfolio/3.png",
+    after: "/images/portfolio/4.png",
   },
   single_line: {
+    id: "3",
     title: "Single Line Image",
     price: "$20",
     body: "Single line image.",
-    before: <>single line image before</>,
-    after: <>single line image after</>,
+    before: "/images/portfolio/1.png",
+    after: "/images/portfolio/2.png",
   },
   additional_pet: {
+    id: "4",
     title: "Additional Pet",
     price: "$10",
     body: "Add an additional Pet.",
-    before: <>additional pet before</>,
-    after: <>additional pet after</>,
+    before: "/images/portfolio/1.png",
+    after: "/images/portfolio/2.png",
   },
 };
