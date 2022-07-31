@@ -38,24 +38,21 @@ export default function PricingScene() {
         <Container>
           <h1>Viewing {galleries[selectedDemo].title || "No example"}</h1>
 
-          <Container>
-            <p>Before</p>
-            <Carousel>
-              {
-                galleries[selectedDemo].before.map((image) => (
+          <ContentRow 
+            cols={[
+              <Carousel
+                slides = {galleries[selectedDemo].before.map((image) => (
                   <Image src={image.url} width="300" height="300" key={image.id} />
-                ))
-              }
-            </Carousel>
-            <p>After</p>
-            <Carousel>
-              {
-                galleries[selectedDemo].after.map((image) => (
-                  <Image src={image.url} width="300" height="300" key={image.key} />
-                ))
-              }
-            </Carousel>
-          </Container>
+                ))}
+              />,
+              <Carousel
+                slides = {galleries[selectedDemo].after.map((image) => (
+                  <Image src={image.url} width="300" height="300" key={image.id} />
+                ))}
+              />
+            ]}
+            colCount={2}
+          />
         </Container>
       }
     </>

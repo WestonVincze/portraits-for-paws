@@ -7,7 +7,7 @@ export default function ContentRow({ cols, colCount = 3 }) {
   return(
     <div className={`${styles.row} ${styles[`col-${colCount}`]}`}>
       {cols.map((col, i) => ( 
-        <div className={styles.col} key={i}>
+        <div className={styles.col} key={`col-${i}`}>
           {col}
         </div>
       ))}

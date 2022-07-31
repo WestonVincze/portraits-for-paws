@@ -22,7 +22,7 @@ export const pricingOptions = [
   }
 ];
 
-export const galleries= {
+export const galleries = {
   pet_portrait: {
     id: "1",
     title: "Pet Portrait",
@@ -55,23 +55,80 @@ export const galleries= {
     title: "Faceless Portrait",
     price: "$30",
     body: "Faceless Portrait.",
-    before: "/images/portfolio/3.png",
-    after: "/images/portfolio/4.png",
+    before:
+      [
+        {
+          id: "1",
+          url: "/images/portfolio/1.png",
+        },
+        {
+          id: "2",
+          url: "/images/portfolio/2.png",
+        }
+      ],
+    after: [
+      {
+        id: "1",
+        url: "/images/portfolio/4.png",
+      },
+      {
+        id: "1",
+        url:"/images/portfolio/5.png",
+      }
+    ]
   },
   single_line: {
     id: "3",
     title: "Single Line Image",
     price: "$20",
     body: "Single line image.",
-    before: "/images/portfolio/1.png",
-    after: "/images/portfolio/2.png",
+    before:
+      [
+        {
+          id: "1",
+          url: "/images/portfolio/1.png",
+        },
+        {
+          id: "2",
+          url: "/images/portfolio/2.png",
+        }
+      ],
+    after: [
+      {
+        id: "1",
+        url: "/images/portfolio/4.png",
+      },
+      {
+        id: "1",
+        url:"/images/portfolio/5.png",
+      }
+    ]
   },
   additional_pet: {
     id: "4",
     title: "Additional Pet",
     price: "$10",
     body: "Add an additional Pet.",
-    before: "/images/portfolio/1.png",
-    after: "/images/portfolio/2.png",
+    before:
+      [
+        {
+          id: "1",
+          url: "/images/portfolio/1.png",
+        },
+        {
+          id: "2",
+          url: "/images/portfolio/2.png",
+        }
+      ],
+    after: [
+      {
+        id: "1",
+        url: "/images/portfolio/4.png",
+      },
+      {
+        id: "1",
+        url:"/images/portfolio/5.png",
+      }
+    ]
   },
 };

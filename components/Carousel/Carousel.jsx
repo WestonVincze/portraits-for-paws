@@ -2,10 +2,11 @@ import styles from "./Carousel.module.css";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-function Carousel({ variant, time = 5000, title, children }) {
+function Carousel({ slides, title, variant = 'fadeIn', time = 5000 }) {
   const [currentSlidePosition, setCurrentSlidePosition] = useState(0);
-  const slides = children;
+  console.log(styles[variant]);
 
+  // control fade in and fade out in here..?
   useEffect(() => {
     const interval = setInterval(() => {
       if (slides.length && slides.length - 1 === currentSlidePosition) {
@@ -22,7 +23,7 @@ function Carousel({ variant, time = 5000, title, children }) {
   // add chevron images to cycle images manually
 
   return(
-    <div className={styles.carousel}>
+    <div className={`${styles.carousel} ${styles[variant]}`}>
       {title && title}
       {slides[currentSlidePosition]}
     </div>
