@@ -1,5 +1,4 @@
 import styles from "./Carousel.module.css";
-import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
 function Carousel({ slides, title, variant = 'fadeIn', time = 5000 }) {
