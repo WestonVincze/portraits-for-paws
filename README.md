@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+NextJS proof of concept for PFP informational website
+
+This project is incomplete and not likely to be finished
